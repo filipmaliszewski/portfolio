@@ -1,0 +1,294 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 9</title>
+  <style>
+    :root {
+      --gap: 0.5rem;
+      --side: 0.5rem;
+      --bg: #000;
+      --text: #fff;
+      --font: Helvetica, Arial, sans-serif;
+      --size: 1rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: var(--font);
+      font-size: var(--size);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+
+    main {
+      width: 100%;
+      padding: 0.5rem;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--gap);
+      flex-wrap: wrap;
+    }
+
+    .title {
+      font-weight: normal;
+      font-size: var(--size);
+    }
+
+    .back-btn {
+      background: none;
+      border: none;
+      font: inherit;
+      color: var(--text);
+      text-transform: uppercase;
+      cursor: pointer;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .back-btn:hover {
+      border-color: var(--text);
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      margin-bottom: var(--gap);
+    }
+
+    .meta {
+      font-style: italic;
+      margin-bottom: calc(var(--gap) * 1.5);
+    }
+
+    .section {
+      margin-bottom: calc(var(--gap) * 2);
+    }
+
+    .section p {
+      margin-bottom: var(--gap);
+    }
+
+    .section img {
+      width: 90%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--gap);
+      justify-content: center;
+      padding: 4rem 0;
+      margin-bottom: -2rem;
+    }
+
+    .row img {
+      flex: 1 1 calc(45% - var(--gap)/2);
+      min-width: 200px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .grid img {
+      width: 90%;
+      height: auto;
+    }
+
+    .full-width-img {
+      width: 70%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: var(--gap) auto;
+      padding: 2rem 0;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: var(--gap);
+      flex-wrap: wrap;
+    }
+
+    .description-columns {
+      display: flex;
+      gap: var(--gap);
+      margin-bottom: calc(var(--gap) * 2);
+      flex-wrap: wrap;
+    }
+
+    .description-columns .left {
+      flex: 0 0 60%;
+    }
+
+    .description-columns .right {
+      flex: 0 0 35%;
+      font-family: 'Times New Roman', Times, serif;
+      line-height: 1.6;
+      margin-left: 2rem;
+    }
+
+    .description-columns .right p {
+      margin-bottom: 0.75rem;
+    }
+
+    .description-columns .right .title {
+      font-family: Arial, sans-serif;
+      font-size: 1.6rem;
+      text-decoration: underline;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-style: italic;
+    }
+
+    .description-columns .right .place {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    .description-columns .right .collab,
+    .description-columns .right .thanks {
+      font-family: Arial, sans-serif;
+      font-size: 0.75rem;
+      opacity: 0.8;
+    }
+
+    .description-columns .right .underscore {
+      text-decoration: underline dotted;
+    }
+.image-grid-even {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.image-grid-even img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+    /* Responsive styles for mobile */
+    @media (max-width: 768px) {
+      header, .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .description-columns {
+        flex-direction: column;
+      }
+
+      .description-columns .left,
+      .description-columns .right {
+        flex: 1 1 100%;
+        margin-left: 0;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .row {
+        flex-direction: column;
+        padding: 1rem 0;
+      }
+
+      .row img {
+        width: 100%;
+      }
+
+      .full-width-img {
+        width: 100%;
+        padding: 1rem 0;
+      }
+
+      main {
+        padding: 1rem;
+      }}
+    /* Make the GIF smaller on desktop */
+@media (min-width: 769px) {
+  .gif-responsive {
+    width: 40% !important; /* adjust as needed */
+  }
+}
+.single-responsive-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem 0rem; /* no auto centering */
+}
+
+@media (min-width: 768px) {
+  .single-responsive-img {
+    width: 40%;
+    margin: 2rem 2rem;
+  }
+}
+  </style>
+</head>
+<body>
+<main>
+<header>
+  <div class="header-top">
+    <span class="name">FILIP MALISZEWSKI</span>
+    <button class="back-btn" onclick="location.href='https://filipmaliszewski.github.io/portfolio/'">WORKS</button>
+  </div>
+</header>
+<div class="section description-columns">
+  <div class="left">
+   <p>Poster design is something I wish to have more experience in. So far the only posters I made were whimsical tryouts and fun experiments.</p>
+  </div>
+  <div class="right">
+    <p class="title">PO_ST@RS</p>
+    <p class="place">Amsterdam, __2025__</p>
+    <p class="collab">
+      Posters designed for<br>
+      <span class="underscore">Angeltooth - tooth gem artist</span>
+    </p>
+    <p class="thanks">
+      Queer Eastern European Event<br>
+      My exhibition Target Practice
+    </p>
+  </div>
+</div>
+
+<div class="image-grid-even">
+  <img src="" alt="">
+  <img src="https://live.staticflickr.com/65535/54608558686_287545bc66_b.jpg" alt="Image 2">
+  <img src="https://live.staticflickr.com/65535/54608756179_5ea1ff1ee6_b.jpg" alt="Image 3">
+  <img src="https://live.staticflickr.com/65535/54608558711_babfb843f2_b.jpg" alt="Image 4">
+  <img src="https://live.staticflickr.com/65535/54608756204_d3df60bb2b_b.jpg" alt="Image 5">
+</div>
+</main>
+</body>
+</html>

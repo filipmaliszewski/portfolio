@@ -1,0 +1,288 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 7</title>
+  <style>
+    :root {
+      --gap: 0.5rem;
+      --side: 0.5rem;
+      --bg: #000;
+      --text: #fff;
+      --font: Helvetica, Arial, sans-serif;
+      --size: 1rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: var(--size);
+      line-height: 1.5;
+    }
+
+    main {
+      width: 100%;
+      padding: 1rem;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: var(--gap);
+    }
+
+    .back-btn {
+      background: none;
+      border: none;
+      color: var(--text);
+      text-transform: uppercase;
+      cursor: pointer;
+      font-size: 0.9rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .back-btn:hover {
+      border-color: var(--text);
+    }
+
+    .description-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .description-columns .left {
+      flex: 1 1 60%;
+    }
+
+    .description-columns .right {
+      flex: 1 1 35%;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .description-columns .right .title {
+      font-size: 1.4rem;
+      font-style: italic;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .description-columns .right .place {
+      font-size: 1rem;
+      font-style: italic;
+    }
+
+    .description-columns .right .collab,
+    .description-columns .right .thanks {
+      font-size: 0.8rem;
+      opacity: 0.85;
+    }
+
+    .description-columns .right .underscore {
+      text-decoration: underline dotted;
+    }
+
+    .video-embed {
+      width: 100vw;
+      margin: 2rem 0;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 0.75rem;
+    }
+
+.grid.portraits {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* Now 6 columns */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.grid.portraits img {
+  width: 100%;
+  aspect-ratio: 2 / 3; /* Ensures portrait orientation */
+  object-fit: cover;
+}
+
+    @media (max-width: 600px) {
+      .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .description-columns {
+        flex-direction: column;
+      }
+
+      .description-columns .left,
+      .description-columns .right {
+        flex: 1 1 100%;
+      }
+
+      .description-columns .right {
+        margin-top: 1rem;
+      }
+
+      main {
+        padding: 1rem 0.75rem;
+      }
+
+      .description-columns .right .title {
+        font-size: 1.2rem;
+      }
+
+      .description-columns .right .place {
+        font-size: 0.9rem;
+      }
+      .grid.portraits {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Now 6 columns */
+  gap: 0.2rem;
+        margin-top: 1rem;}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="header-top">
+      <span class="name">FILIP MALISZEWSKI</span>
+    <button class="back-btn" onclick="location.href='https://filipmaliszewski.github.io/portfolio/'">WORKS</button>
+    </div>
+  </header>
+
+  <div class="section description-columns">
+    <div class="left">
+ <p>
+In November 2024 I came across a news story about a young German man named Jascha Hardenberg, who vanished without a trace on the remote island of Madeira, Portugal. He had gone missing during a hike in the Rabaçal area on December 29, 2020, just one day after posting a photo of himself at a local Christmas market. That Facebook image was the last known trace of him.
+
+Madeira caught my attention for more than just its mystery. It’s a small, isolated island with limited escape routes, and yet multiple people disappear there each year without a body ever being found. In the 21st century, in a world where fridges can text you about running out of almond milk because they know you’re near a supermarket, how is it possible for someone to vanish without leaving a digital trace?
+
+I launched my own amateur investigation, blending art with obsession. I found a publicly accessible webcam streaming live from the same Christmas market where Jascha had taken his last photo. I wrote an AI-powered facial recognition bot using MTCNN to scan and save the faces of people passing through the footage. In 7 minutes, I collected over 80,000 face-shots - portraits of unsuspecting individuals captured by a camera they never noticed.
+
+This project confronts a strange paradox: the same surveillance infrastructure that commodifies us for profit fails us when it comes to real human need. We live in a world saturated with data, yet when a person disappears, that data often proves elusive.
+Here I was, a 23-year-old art student, casually scraping faces from livestreams in my slightly grimy Nieuw-West apartment, and it was disturbingly easy. It made me question not just the ethics of surveillance, but who it really serves.
+</p>
+    </div>
+    <div class="right">
+      <p class="title">SuRRVei1aNCe_-IsL-and</p>
+      <p class="place">Amsterdam, __2025__</p>
+      <p class="collab">
+        <br>
+        <span class="underscore"><br>coded with python<br>research work</span>
+      </p>
+    </div>
+  </div>
+
+<div class="grid portraits">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXUzbzVmeXYwcGMwYmxhcGUwbHQydzltNnEwNXE1b2Y5MTU4MHFvZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yVU1f5kMENkBPu9Pio/giphy.gif" alt="Portrait 1">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDRtbmI4cnRiZzJsNHEzb203bXVqbW8xMDdic3l3dTM3NDkzamV1OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UXmDc9mj2kGbGmeVCf/giphy.gif" alt="Portrait 2">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTgzYm80MmtseGFvazFiYmI3NWpvbDJoczg3YWZ0eTVwMDVhYXRvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pSydm2im1pUxSw4mZl/giphy.gif" alt="Portrait 3">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWJsbDUxN3FyM3h2ajFpamlpbmJpejM0bGo1YjJsdnhob3J4Y2NteSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Uoz930dfOnn2xDSkuO/giphy.gif" alt="Portrait 4">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnBma2Y3b3phdDN6aXQ2Z3htdGVqbWRieXN2bTExZ2R4bTcxMTl3cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gewl7ZNhnLBJFa2sH0/giphy.gif" alt="Portrait 5">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY29nMGdvYWZyaDI1cXR2cDZ6aGQxNGF6aG5lZGFxYXo5eTIzeWtpdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/o2UUNsKgIXmrKibHtt/giphy.gif" alt="Portrait 6">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXhpdGwwY2szYmhjMnM0cXQzM3o2bzd2MHR1Ymx5cTJ6amV4bzQ4bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4vb0xJtMT2NsMXqsGY/giphy.gif" alt="Portrait 7">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWJvcmZjdDBsdXczbDI4aDF3MHRmczRqeno2d2dqcnRoaHB3cXBhdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/c89F5hu7AKSrjrTWRy/giphy.gif" alt="Portrait 8">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2VoNG80a3M1eHlhenFzb3kxYjJheDlwcGd6b3k3bDk1em5kaHByZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iBFj7tBYoTN6JzRCAv/giphy.gif" alt="Portrait 9">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzUyYjVvdmtrYW9nOWg0YzljNHpheHdkc3R1dWQ1M2h3NWs0bm5wYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/e9H2bts6aUa69c9sYu/giphy.gif" alt="Portrait 10">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3JrbnU5MGYxeHpqNWl5cTBidndobHhvNmh3MHRycHRsZmE4ZXhheCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/J6mbJMZss4lwd43eav/giphy.gif" alt="Portrait 11">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExam0yNzl4eWNidGNndm1rZzFzZmN5ZW50cXdrbmxkNW12ODNkcHZveCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PNBkKpv0r423SD9JGz/giphy.gif" alt="Portrait 12">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGF6bzcwcWgxNWplZ2FpdHd2MnE4cmQ3NTFmbzRhd3hsdThhYTd3NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3RnrrImIHfWTSGojy2/giphy.gif" alt="Portrait 13">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXk0ZnE0eGc2NTZxa3Fydm82N3YyNGh2Zm4wZmZsazc4dWxiemhoZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gLTj7lNiVCrtJCsugi/giphy.gif" alt="Portrait 14">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzJlMGRzN2MxdTgxOGZjZmpib3Uwa3hsMnZ4emphenIzdDR1bXlwayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bVeYLjWup4HgbKGAuL/giphy.gif" alt="Portrait 15">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDZyYWNhbXZxaDQ1NHpuZTJyY3RkY2NqbW9nNHdwOGZrMWpjNG5hOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VmA6R4nlt7LsA1cJVg/giphy.gif" alt="Portrait 16">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHFwa2J2NTEzdmI4ZjFuNW02ajZiazJybWd0ZnlneWluNzI3aDg5NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EQe77dtXru1odQpKPn/giphy.gif" alt="Portrait 17">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG51emJmcjBzcmQ3d2xleHQ3ZWZqd2NyMHkwdnpyYmZ6emtneDBnOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uL2L0MLwGzE9T6Rdhp/giphy.gif" alt="Portrait 18">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXUzbzVmeXYwcGMwYmxhcGUwbHQydzltNnEwNXE1b2Y5MTU4MHFvZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yVU1f5kMENkBPu9Pio/giphy.gif" alt="Portrait 1">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDRtbmI4cnRiZzJsNHEzb203bXVqbW8xMDdic3l3dTM3NDkzamV1OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UXmDc9mj2kGbGmeVCf/giphy.gif" alt="Portrait 2">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTgzYm80MmtseGFvazFiYmI3NWpvbDJoczg3YWZ0eTVwMDVhYXRvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pSydm2im1pUxSw4mZl/giphy.gif" alt="Portrait 3">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWJsbDUxN3FyM3h2ajFpamlpbmJpejM0bGo1YjJsdnhob3J4Y2NteSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Uoz930dfOnn2xDSkuO/giphy.gif" alt="Portrait 4">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnBma2Y3b3phdDN6aXQ2Z3htdGVqbWRieXN2bTExZ2R4bTcxMTl3cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gewl7ZNhnLBJFa2sH0/giphy.gif" alt="Portrait 5">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY29nMGdvYWZyaDI1cXR2cDZ6aGQxNGF6aG5lZGFxYXo5eTIzeWtpdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/o2UUNsKgIXmrKibHtt/giphy.gif" alt="Portrait 6">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXhpdGwwY2szYmhjMnM0cXQzM3o2bzd2MHR1Ymx5cTJ6amV4bzQ4bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4vb0xJtMT2NsMXqsGY/giphy.gif" alt="Portrait 7">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWJvcmZjdDBsdXczbDI4aDF3MHRmczRqeno2d2dqcnRoaHB3cXBhdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/c89F5hu7AKSrjrTWRy/giphy.gif" alt="Portrait 8">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2VoNG80a3M1eHlhenFzb3kxYjJheDlwcGd6b3k3bDk1em5kaHByZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iBFj7tBYoTN6JzRCAv/giphy.gif" alt="Portrait 9">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzUyYjVvdmtrYW9nOWg0YzljNHpheHdkc3R1dWQ1M2h3NWs0bm5wYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/e9H2bts6aUa69c9sYu/giphy.gif" alt="Portrait 10">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3JrbnU5MGYxeHpqNWl5cTBidndobHhvNmh3MHRycHRsZmE4ZXhheCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/J6mbJMZss4lwd43eav/giphy.gif" alt="Portrait 11">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExam0yNzl4eWNidGNndm1rZzFzZmN5ZW50cXdrbmxkNW12ODNkcHZveCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PNBkKpv0r423SD9JGz/giphy.gif" alt="Portrait 12">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGF6bzcwcWgxNWplZ2FpdHd2MnE4cmQ3NTFmbzRhd3hsdThhYTd3NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3RnrrImIHfWTSGojy2/giphy.gif" alt="Portrait 13">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXk0ZnE0eGc2NTZxa3Fydm82N3YyNGh2Zm4wZmZsazc4dWxiemhoZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gLTj7lNiVCrtJCsugi/giphy.gif" alt="Portrait 14">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzJlMGRzN2MxdTgxOGZjZmpib3Uwa3hsMnZ4emphenIzdDR1bXlwayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bVeYLjWup4HgbKGAuL/giphy.gif" alt="Portrait 15">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDZyYWNhbXZxaDQ1NHpuZTJyY3RkY2NqbW9nNHdwOGZrMWpjNG5hOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VmA6R4nlt7LsA1cJVg/giphy.gif" alt="Portrait 16">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHFwa2J2NTEzdmI4ZjFuNW02ajZiazJybWd0ZnlneWluNzI3aDg5NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EQe77dtXru1odQpKPn/giphy.gif" alt="Portrait 17">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG51emJmcjBzcmQ3d2xleHQ3ZWZqd2NyMHkwdnpyYmZ6emtneDBnOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uL2L0MLwGzE9T6Rdhp/giphy.gif" alt="Portrait 18">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXUzbzVmeXYwcGMwYmxhcGUwbHQydzltNnEwNXE1b2Y5MTU4MHFvZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yVU1f5kMENkBPu9Pio/giphy.gif" alt="Portrait 1">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDRtbmI4cnRiZzJsNHEzb203bXVqbW8xMDdic3l3dTM3NDkzamV1OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UXmDc9mj2kGbGmeVCf/giphy.gif" alt="Portrait 2">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTgzYm80MmtseGFvazFiYmI3NWpvbDJoczg3YWZ0eTVwMDVhYXRvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pSydm2im1pUxSw4mZl/giphy.gif" alt="Portrait 3">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWJsbDUxN3FyM3h2ajFpamlpbmJpejM0bGo1YjJsdnhob3J4Y2NteSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Uoz930dfOnn2xDSkuO/giphy.gif" alt="Portrait 4">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnBma2Y3b3phdDN6aXQ2Z3htdGVqbWRieXN2bTExZ2R4bTcxMTl3cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gewl7ZNhnLBJFa2sH0/giphy.gif" alt="Portrait 5">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY29nMGdvYWZyaDI1cXR2cDZ6aGQxNGF6aG5lZGFxYXo5eTIzeWtpdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/o2UUNsKgIXmrKibHtt/giphy.gif" alt="Portrait 6">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXhpdGwwY2szYmhjMnM0cXQzM3o2bzd2MHR1Ymx5cTJ6amV4bzQ4bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4vb0xJtMT2NsMXqsGY/giphy.gif" alt="Portrait 7">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWJvcmZjdDBsdXczbDI4aDF3MHRmczRqeno2d2dqcnRoaHB3cXBhdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/c89F5hu7AKSrjrTWRy/giphy.gif" alt="Portrait 8">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2VoNG80a3M1eHlhenFzb3kxYjJheDlwcGd6b3k3bDk1em5kaHByZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iBFj7tBYoTN6JzRCAv/giphy.gif" alt="Portrait 9">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzUyYjVvdmtrYW9nOWg0YzljNHpheHdkc3R1dWQ1M2h3NWs0bm5wYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/e9H2bts6aUa69c9sYu/giphy.gif" alt="Portrait 10">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3JrbnU5MGYxeHpqNWl5cTBidndobHhvNmh3MHRycHRsZmE4ZXhheCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/J6mbJMZss4lwd43eav/giphy.gif" alt="Portrait 11">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExam0yNzl4eWNidGNndm1rZzFzZmN5ZW50cXdrbmxkNW12ODNkcHZveCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PNBkKpv0r423SD9JGz/giphy.gif" alt="Portrait 12">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGF6bzcwcWgxNWplZ2FpdHd2MnE4cmQ3NTFmbzRhd3hsdThhYTd3NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3RnrrImIHfWTSGojy2/giphy.gif" alt="Portrait 13">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXk0ZnE0eGc2NTZxa3Fydm82N3YyNGh2Zm4wZmZsazc4dWxiemhoZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gLTj7lNiVCrtJCsugi/giphy.gif" alt="Portrait 14">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzJlMGRzN2MxdTgxOGZjZmpib3Uwa3hsMnZ4emphenIzdDR1bXlwayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bVeYLjWup4HgbKGAuL/giphy.gif" alt="Portrait 15">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDZyYWNhbXZxaDQ1NHpuZTJyY3RkY2NqbW9nNHdwOGZrMWpjNG5hOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VmA6R4nlt7LsA1cJVg/giphy.gif" alt="Portrait 16">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHFwa2J2NTEzdmI4ZjFuNW02ajZiazJybWd0ZnlneWluNzI3aDg5NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EQe77dtXru1odQpKPn/giphy.gif" alt="Portrait 17">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG51emJmcjBzcmQ3d2xleHQ3ZWZqd2NyMHkwdnpyYmZ6emtneDBnOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uL2L0MLwGzE9T6Rdhp/giphy.gif" alt="Portrait 18">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXUzbzVmeXYwcGMwYmxhcGUwbHQydzltNnEwNXE1b2Y5MTU4MHFvZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yVU1f5kMENkBPu9Pio/giphy.gif" alt="Portrait 1">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDRtbmI4cnRiZzJsNHEzb203bXVqbW8xMDdic3l3dTM3NDkzamV1OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UXmDc9mj2kGbGmeVCf/giphy.gif" alt="Portrait 2">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTgzYm80MmtseGFvazFiYmI3NWpvbDJoczg3YWZ0eTVwMDVhYXRvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pSydm2im1pUxSw4mZl/giphy.gif" alt="Portrait 3">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWJsbDUxN3FyM3h2ajFpamlpbmJpejM0bGo1YjJsdnhob3J4Y2NteSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Uoz930dfOnn2xDSkuO/giphy.gif" alt="Portrait 4">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnBma2Y3b3phdDN6aXQ2Z3htdGVqbWRieXN2bTExZ2R4bTcxMTl3cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gewl7ZNhnLBJFa2sH0/giphy.gif" alt="Portrait 5">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY29nMGdvYWZyaDI1cXR2cDZ6aGQxNGF6aG5lZGFxYXo5eTIzeWtpdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/o2UUNsKgIXmrKibHtt/giphy.gif" alt="Portrait 6">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXhpdGwwY2szYmhjMnM0cXQzM3o2bzd2MHR1Ymx5cTJ6amV4bzQ4bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4vb0xJtMT2NsMXqsGY/giphy.gif" alt="Portrait 7">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWJvcmZjdDBsdXczbDI4aDF3MHRmczRqeno2d2dqcnRoaHB3cXBhdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/c89F5hu7AKSrjrTWRy/giphy.gif" alt="Portrait 8">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2VoNG80a3M1eHlhenFzb3kxYjJheDlwcGd6b3k3bDk1em5kaHByZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iBFj7tBYoTN6JzRCAv/giphy.gif" alt="Portrait 9">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzUyYjVvdmtrYW9nOWg0YzljNHpheHdkc3R1dWQ1M2h3NWs0bm5wYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/e9H2bts6aUa69c9sYu/giphy.gif" alt="Portrait 10">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3JrbnU5MGYxeHpqNWl5cTBidndobHhvNmh3MHRycHRsZmE4ZXhheCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/J6mbJMZss4lwd43eav/giphy.gif" alt="Portrait 11">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExam0yNzl4eWNidGNndm1rZzFzZmN5ZW50cXdrbmxkNW12ODNkcHZveCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PNBkKpv0r423SD9JGz/giphy.gif" alt="Portrait 12">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGF6bzcwcWgxNWplZ2FpdHd2MnE4cmQ3NTFmbzRhd3hsdThhYTd3NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3RnrrImIHfWTSGojy2/giphy.gif" alt="Portrait 13">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXk0ZnE0eGc2NTZxa3Fydm82N3YyNGh2Zm4wZmZsazc4dWxiemhoZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gLTj7lNiVCrtJCsugi/giphy.gif" alt="Portrait 14">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzJlMGRzN2MxdTgxOGZjZmpib3Uwa3hsMnZ4emphenIzdDR1bXlwayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bVeYLjWup4HgbKGAuL/giphy.gif" alt="Portrait 15">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDZyYWNhbXZxaDQ1NHpuZTJyY3RkY2NqbW9nNHdwOGZrMWpjNG5hOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VmA6R4nlt7LsA1cJVg/giphy.gif" alt="Portrait 16">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHFwa2J2NTEzdmI4ZjFuNW02ajZiazJybWd0ZnlneWluNzI3aDg5NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EQe77dtXru1odQpKPn/giphy.gif" alt="Portrait 17">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG51emJmcjBzcmQ3d2xleHQ3ZWZqd2NyMHkwdnpyYmZ6emtneDBnOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uL2L0MLwGzE9T6Rdhp/giphy.gif" alt="Portrait 18">
+</div>
+
+  <div class="section video-embed">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/QqrwggLrHII?si=skhRaslEVygLG2CF"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </div>
+  </div>
+  </main>
+</body>

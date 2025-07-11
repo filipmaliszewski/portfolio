@@ -1,0 +1,293 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>project 1</title>
+  <style>
+    :root {
+      --gap: 0.5rem;
+      --side: 0.5rem;
+      --bg: #000;
+      --text: #fff;
+      --font: Helvetica, Arial, sans-serif;
+      --size: 1rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: var(--font);
+      font-size: var(--size);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+
+    main {
+      width: 100%;
+      padding: 0.5rem;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--gap);
+      flex-wrap: wrap;
+    }
+
+    .title {
+      font-weight: normal;
+      font-size: var(--size);
+    }
+
+    .back-btn {
+      background: none;
+      border: none;
+      font: inherit;
+      color: var(--text);
+      text-transform: uppercase;
+      cursor: pointer;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .back-btn:hover {
+      border-color: var(--text);
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      margin-bottom: var(--gap);
+    }
+
+    .meta {
+      font-style: italic;
+      margin-bottom: calc(var(--gap) * 1.5);
+    }
+
+    .section {
+      margin-bottom: calc(var(--gap) * 2);
+    }
+
+    .section p {
+      margin-bottom: var(--gap);
+    }
+
+    .section img {
+      width: 90%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--gap);
+      justify-content: center;
+      padding: 4rem 0;
+      margin-bottom: -2rem;
+    }
+
+    .row img {
+      flex: 1 1 calc(45% - var(--gap)/2);
+      min-width: 200px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .grid img {
+      width: 90%;
+      height: auto;
+    }
+
+    .full-width-img {
+      width: 70%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: var(--gap) auto;
+      padding: 2rem 0;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: var(--gap);
+      flex-wrap: wrap;
+    }
+
+    .description-columns {
+      display: flex;
+      gap: var(--gap);
+      margin-bottom: calc(var(--gap) * 2);
+      flex-wrap: wrap;
+    }
+
+    .description-columns .left {
+      flex: 0 0 60%;
+    }
+
+    .description-columns .right {
+      flex: 0 0 35%;
+      font-family: 'Times New Roman', Times, serif;
+      line-height: 1.6;
+      margin-left: 2rem;
+    }
+
+    .description-columns .right p {
+      margin-bottom: 0.75rem;
+    }
+
+    .description-columns .right .title {
+      font-family: Arial, sans-serif;
+      font-size: 1.6rem;
+      text-decoration: underline;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-style: italic;
+    }
+
+    .description-columns .right .place {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    .description-columns .right .collab,
+    .description-columns .right .thanks {
+      font-family: Arial, sans-serif;
+      font-size: 0.75rem;
+      opacity: 0.8;
+    }
+
+    .description-columns .right .underscore {
+      text-decoration: underline dotted;
+    }
+
+    /* Responsive styles for mobile */
+    @media (max-width: 768px) {
+      header, .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .description-columns {
+        flex-direction: column;
+      }
+
+      .description-columns .left,
+      .description-columns .right {
+        flex: 1 1 100%;
+        margin-left: 0;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .row {
+        flex-direction: column;
+        padding: 1rem 0;
+      }
+
+      .row img {
+        width: 100%;
+      }
+
+      .full-width-img {
+        width: 100%;
+        padding: 1rem 0;
+      }
+
+      main {
+        padding: 1rem;
+      }}
+    /* Make the GIF smaller on desktop */
+@media (min-width: 769px) {
+  .gif-responsive {
+    width: 40% !important; /* adjust as needed */
+  }
+}
+  </style>
+</head>
+<body>
+<main>
+<header>
+  <div class="header-top">
+    <span class="name">FILIP MALISZEWSKI</span>
+    <button class="back-btn" onclick="location.href='https://filipmaliszewski.github.io/portfolio/'">WORKS</button>
+  </div>
+</header>
+<div class="section description-columns">
+  <div class="left">
+    <p>Once I f*cked Adrian B. is a performative piece including a series of self-portraits, culminating in a zine sold at Polycopies in Paris, 2023.<br>
+
+The project emerged from an exploration of a persona I began shaping as a young queer individual growing up in a small town in northern Poland. I developed this persona further as part of the work. For years now, Poland has been considered one of the most homophobic countries in the EU, consistently ranked the lowest by ILGA-Europe. My move to the Netherlands was, in part, a response to the rise of fascism in Poland and the introduction of “LGBT-free zones,” which at one point covered nearly a third of the country.
+
+After relocating to Amsterdam, I found myself embraced by a queer, patchwork Polish family and surrounded by a vibrant drag scene. From this environment, the character of Adrian B. was born. It was a drag king persona embodying the kind of hypermasculine figure I feared in my youth. Adrian represents the "Dres" (similar to the Russian Gopnik), a member of a distinct Polish subculture defined by aggressive masculinity, nationalism, homophobia, shaved heads, Adidas tracksuits, Polish hip-hop, and deep devotion to football clubs—often displayed through clothing and emblems.
+
+But the project went beyond queer play. It satirized the homoerotic undercurrents of these hypermasculine identities while serving as a form of personal therapy - a way to process, reclaim, and reposition my identity. As a contrast to Adrian, I also created Yolanda, a character loosely inspired by my distant aunt: a woman obsessed with leopard print and heavy eyeliner, exuding an exaggerated, unapologetic femininity.</p>
+  </div>
+<div class="right">
+  <p class="title">OnCE_I-F*cked with_Adrian B.</p>
+  <p class="place">Amsterdam, __2024__</p>
+  <p class="collab">
+    design, photography, production<br>
+    <span class="underscore">and virtually everything - by me</span>
+  </p>
+  <p class="thanks">
+    special thanks to<br>
+    Adela Wagner<br>
+    Todor Milovic<br>
+    Henriks Pekalis<br>
+  </p>
+</div>
+</div>
+
+  <div class="section">
+    <div class="row">
+      <img src="https://live.staticflickr.com/65535/54608421429_7e8734a77a_b.jpg" alt="Image 1">
+      <img src="https://live.staticflickr.com/65535/54608563675_6a3c45364f_b.jpg" alt="Image 2">
+      <img src="https://live.staticflickr.com/65535/54608226766_6d114d29ce_b.jpg" alt="Image 3">
+      <img src="https://live.staticflickr.com/65535/54608421854_066a83bef8_b.jpg" alt="Image 4">
+    </div>
+  </div>
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExODFvMjdoYTdhc3ZxejB4ZmtiMHY4YTVtNHB5MWF3bjNpdzI5cnhmcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/q1lyUkppISmO1jfDWC/giphy.gif" alt="Full width image" class="full-width-img gif-responsive">
+  <div class="section">
+    
+    <div class="grid">
+      <img src="https://live.staticflickr.com/65535/54608313576_99c7027fc5_z.jpg" alt="Process 1">
+      <img src="https://live.staticflickr.com/65535/54608313566_1257da31da_z.jpg" alt="Process 2">
+      <img src="https://live.staticflickr.com/65535/54608523958_856159a668_z.jpg" alt="Process 3">
+      <img src="https://live.staticflickr.com/65535/54608313516_1f0eae6af6_z.jpg" alt="Process 4">
+      <img src="https://live.staticflickr.com/65535/54608618715_e59dfffdf0_z.jpg" alt="Process 5">
+      <img src="https://live.staticflickr.com/65535/54608523923_a1300cb9d0_z.jpg" alt="Process 6">
+    </div>
+  </div>
+  <img src="https://live.staticflickr.com/65535/54608421674_9f918ec3dc_b.jpg" alt="Full width image" class="full-width-img">
+  <div class="section">    </div>
+      <img src="https://live.staticflickr.com/65535/54608438063_5f15fd60fb_b.jpg" alt="Full width image" class="full-width-img">
+  <div class="section">     </div>
+</main>
+</body>
+</html>
