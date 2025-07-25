@@ -1,0 +1,246 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>project 6</title>
+  <style>
+    :root {
+      --gap: 0.5rem;
+      --side: 0.5rem;
+      --bg: #000;
+      --text: #fff;
+      --font: Helvetica, Arial, sans-serif;
+      --size: 1rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: var(--size);
+      line-height: 1.5;
+    }
+
+    main {
+      width: 100%;
+      padding: 1rem;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: var(--gap);
+    }
+
+    .back-btn {
+      background: none;
+      border: none;
+      color: var(--text);
+      text-transform: uppercase;
+      cursor: pointer;
+      font-size: 0.9rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .back-btn:hover {
+      border-color: var(--text);
+    }
+
+    .description-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .description-columns .left {
+      flex: 1 1 60%;
+    }
+
+    .description-columns .right {
+      flex: 1 1 35%;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .description-columns .right .title {
+      font-size: 1.4rem;
+      font-style: italic;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .description-columns .right .place {
+      font-size: 1rem;
+      font-style: italic;
+    }
+
+    .description-columns .right .collab,
+    .description-columns .right .thanks {
+      font-size: 0.8rem;
+      opacity: 0.85;
+    }
+
+    .description-columns .right .underscore {
+      text-decoration: underline dotted;
+    }
+
+    .row.portraits {
+      display: flex;
+      gap: 0.75rem;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .row.portraits img {
+      flex: 0 0 auto;
+      width: 150px;
+      min-width: 120px;
+      height: auto;
+      object-fit: cover;
+      loading: eager;
+      will-change: transform;
+    }
+
+    .video-embed {
+      width: 100vw;
+      margin: 2rem 0;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 0.75rem;
+    }
+
+    @media (max-width: 600px) {
+      .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .description-columns {
+        flex-direction: column;
+      }
+
+      .description-columns .left,
+      .description-columns .right {
+        flex: 1 1 100%;
+      }
+
+      .description-columns .right {
+        margin-top: 1rem;
+      }
+
+      main {
+        padding: 1rem 0.75rem;
+      }
+
+      .row.portraits img {
+        width: 120px;
+        min-width: 100px;
+      }
+
+      .description-columns .right .title {
+        font-size: 1.2rem;
+      }
+
+      .description-columns .right .place {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<main>
+<header>
+  <div class="header-top">
+    <span class="name">FILIP MALISZEWSKI</span>
+    <button class="back-btn" onclick="location.href='https://filipmaliszewski.github.io/portfolio/'">WORKS</button>
+  </div>
+</header>
+
+<div class="section description-columns">
+  <div class="left">
+    <p>My motivation behind the airport assignment was strictly ruled by the properties of the
+screen as well as the client itself. In this case client is not actually the airport, but people
+in the waiting room, stressing out or relaxing before the flight. To actually understand the
+viewer is to put oneself into their place, as I did since I’m an international student who
+flies back to my home country few times a year. The person watching, in that case,
+doesn’t want to be immersed into deep understanding of social dilemmas and won’t be
+focusing on the artwork itself for a longer period of time, unless the work would be
+constantly visually stimulating.
+The screen itself is a fascinating case of cutting edge technology that us as artist are able
+to experience and experiment with. Even though movie has to be silent and the colour
+scheme monochrome (almost black and white). The advantage of having a see through
+display is a perk as well as a challenge itself.<br>
+While editing, a happy accident happened as the bird from one frame crossed into another turning
+into the car. That accident shaped my idea and made it full. Beginning of the
+movie is constructed in the way the videos on each screen overlap. They create a singular
+movie screen despite presenting completely diﬀerent clips. And that is also the most
+entertaining part for the viewer. No matter how many times they watch the movie which is
+only 30 seconds long, they will want to rewatch it. I tried it with audience consisting of my
+friends, peers, sometimes random people and the thing linking all of them together is
+rewatching the movie in the loop, always finding new connections. I think that will work
+out in the airport environment perfectly, especially for people with anxiety and kids, as it is
+almost interactive in that form. Almost like adventure point-and-click games I used to
+adore as a child, actively engaging the viewer in looking for the clues.</p>
+  </div>
+<div class="right">
+  <p class="title">RoTTerdamAIRpoRT_VidE0-VVind0W_</p>
+  <p class="place">Rotterdam, __2022__</p>
+  <p class="collab">
+    opportunity to work with a new technology<br>
+    <span class="underscore">that uses darkening elements <br>and turns winow into a video display
+     </span>
+  </p>
+  </div>
+</div>
+<br>
+<div class="section portrait-row">
+  <div class="row portraits">
+    <img src="https://media4.giphy.com/media/rpKkqbRNReayHegeRb/giphy.gif?cb=1" alt="Portrait 1" loading="eager">
+    <img src="https://media1.giphy.com/media/2fvVunoWrlXc2AHF1U/giphy.gif?cb=2" alt="Portrait 2" loading="eager">
+    <img src="https://media0.giphy.com/media/uPWkIIJhdiSLr2fm2C/giphy.gif?cb=3" alt="Portrait 3" loading="eager">
+    <img src="https://media2.giphy.com/media/zBD6Kipo27JUkvplNp/giphy.gif?cb=4" alt="Portrait 4" loading="eager">
+    <img src="https://media2.giphy.com/media/1QhxNUNkQwx9DUkXay/giphy.gif?cb=5" alt="Portrait 5" loading="eager">
+    <img src="https://media0.giphy.com/media/lL84XYKj4mV7mrIoMM/giphy.gif?cb=6" alt="Portrait 6" loading="eager">
+  </div>
+</div>
+<br>
+<!-- Responsive YouTube video -->
+<div class="section video-embed">
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/Z9mxyh5XnBo?si=UUFMjNBrsQ-koZB8"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </div>
+</div>
+
+</main>
+</body>

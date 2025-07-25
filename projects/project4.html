@@ -1,0 +1,321 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 4</title>
+  <style>
+    :root {
+      --gap: 0.5rem;
+      --side: 0.5rem;
+      --bg: #000;
+      --text: #fff;
+      --font: Helvetica, Arial, sans-serif;
+      --size: 1rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: var(--font);
+      font-size: var(--size);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+
+    main {
+      width: 100%;
+      padding: 0.5rem;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--gap);
+      flex-wrap: wrap;
+    }
+
+    .back-btn {
+      background: none;
+      border: none;
+      font: inherit;
+      color: var(--text);
+      text-transform: uppercase;
+      cursor: pointer;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .back-btn:hover {
+      border-color: var(--text);
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      margin-bottom: var(--gap);
+    }
+
+    .section {
+      margin-bottom: calc(var(--gap) * 2);
+    }
+
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+    .grid img {
+      width: 70%;
+      height: auto;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: var(--gap);
+      flex-wrap: wrap;
+    }
+
+    .description-columns {
+      display: flex;
+      gap: var(--gap);
+      margin-bottom: calc(var(--gap) * 2);
+      flex-wrap: wrap;
+    }
+
+    .description-columns .left {
+      flex: 0 0 40%;
+    }
+
+    .description-columns .right {
+      flex: 0 0 30%;
+      font-family: 'Times New Roman', Times, serif;
+      line-height: 1.6;
+      margin-left: 2rem;
+    }
+
+    .description-columns .right p {
+      margin-bottom: 0.75rem;
+    }
+
+    .description-columns .right .title {
+      font-family: Arial, sans-serif;
+      font-size: 1.6rem;
+      text-decoration: underline;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-style: italic;
+    }
+
+    .description-columns .right .place {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    .description-columns .right .collab,
+    .description-columns .right .thanks {
+      font-family: Arial, sans-serif;
+      font-size: 0.75rem;
+      opacity: 0.8;
+    }
+
+    .description-columns .right .underscore {
+      text-decoration: underline dotted;
+    }
+    .grid-preview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 1rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+      padding: 4rem;
+      gap: 4rem;
+}
+
+.grid-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+    .row-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+      padding: 4rem;
+      gap: 4rem;
+        margin-left: auto;
+  margin-right: auto;
+}
+.row-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  .description-columns {
+    flex-direction: column;
+  }
+
+  .description-columns .left,
+  .description-columns .right {
+    flex: 1 1 100%;
+    margin-left: 0;
+  }
+
+  .grid-preview,
+  .row-images {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .grid img {
+    width: 100%;
+  }
+
+  .description-columns .right .title {
+    font-size: 1.2rem;
+  }
+
+  .description-columns .right .place {
+    font-size: 1rem;
+  }
+
+  .description-columns .right .collab,
+  .description-columns .right .thanks {
+    font-size: 0.65rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
+ </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="header-top">
+      <span class="name">FILIP MALISZEWSKI</span>
+    <button class="back-btn" onclick="location.href='https://filipmaliszewski.github.io/portfolio/'">WORKS</button>
+    </div>
+  </header>
+
+  <div class="section description-columns">
+    <div class="left">
+      <p>Photography, for me, is nothing less than a compulsive, obsessive act of collecting fragments of reality that always seem to slip through my fingers. All these beautiful images get eventually stashed away in dry, safe boxes under the desk or sealed inside aluminum hard drives—buried between processors and transistors.<br>
+I have a terrible habit of storing them across various clouds, treating these heavenly images like gods in the sky, offering them the necessary reverence in hopes they’ll reappear in full brightness on my LED screen. But, just like clouds, many of my images have silently vanished with time.<br>
+Frankly, I truly believe in fate—and I’ve come to think that those lost images were meant to disappear. Because a single photo in a series can completely shift its narrative. That’s why the sequence of images below is random. There are over 87 billion possible arrangements, each offering a unique constellation of meaning.<br><br>
+Still, there’s only so much you can leave to fate. The stories may shuffle endlessly, but the pieces were placed with care.
+      </p>
+    </div>
+    <div class="right">
+      <p class="title">PhotoGraphic_projects_</p>
+      <p class="place">2023-25</p>
+      <p class="collab">
+        <span class="underscore">bad grindr hookups<br>
+          5AM cigarettes (I quit)<br>
+          a lot of protests<br>
+          really messy kitchen counters<br>
+           and train rides<br>
+          - to where exactly?<br>
+          ?medieval fantasy of no electricity?<br>
+          I would totally survive a zombie apocalypse
+          </span>
+      </p>
+    </div>
+  </div>
+  <div class="section">
+  <div class="grid"></div> <!-- Empty container, JS will fill -->
+</div>
+<div class="grid-preview"></div>
+  <div class="row-images">
+  <img src="https://live.staticflickr.com/65535/54602421010_40ac5c2093_b.jpg" alt="Extra 1">
+  <img src="https://live.staticflickr.com/65535/54601236347_e92b180dd4_b.jpg" alt="Extra 2">
+  <img src="https://live.staticflickr.com/65535/54602328238_174cf9e116_b.jpg" alt="Extra 3">
+</div>
+  
+</main>
+</body>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.querySelector('.grid');
+  const gridPreview = document.querySelector('.grid-preview');
+
+  // List of image URLs and alt text as objects
+  const imagesData = [
+    { src: "https://live.staticflickr.com/65535/54602328358_94677ac037_b.jpg", alt: "Process 1" },
+    { src: "https://live.staticflickr.com/65535/54602117831_6cedd18d18_b.jpg", alt: "Process 2" },
+    { src: "https://live.staticflickr.com/65535/54602307074_b549590a4f_b.jpg", alt: "Process 3" },
+    { src: "https://live.staticflickr.com/65535/54602117696_02aca87670_b.jpg", alt: "Process 4" },
+    { src: "https://live.staticflickr.com/65535/54602117896_60d7b55e89_b.jpg", alt: "Process 5" },
+    { src: "https://live.staticflickr.com/65535/54602307009_4d74f837bf_b.jpg", alt: "Process 6" },
+    { src: "https://live.staticflickr.com/65535/54601236572_8567b8d170_b.jpg", alt: "Process 7" },
+    { src: "https://live.staticflickr.com/65535/54602307489_c9716d084c_b.jpg", alt: "Process 8" },
+    { src: "https://live.staticflickr.com/65535/54602328193_d38f5e88ee_b.jpg", alt: "Process 9" },
+    { src: "https://live.staticflickr.com/65535/54602328458_f8ea2bd9c8_b.jpg", alt: "Process 10" },
+    { src: "https://live.staticflickr.com/65535/54615544788_faaf51bd3f_b.jpg", alt: "Process 11" }
+  ];
+
+  // Shuffle function (Fisher-Yates)
+  function shuffleArray(array) {
+    for (let i = array.length -1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  shuffleArray(imagesData);
+
+  // Populate both containers with the same shuffled images
+  imagesData.forEach(({src, alt}) => {
+    const imgVideo = document.createElement('img');
+    imgVideo.src = src;
+    imgVideo.alt = alt;
+    imgVideo.style.display = 'none'; // hide initially
+    grid.appendChild(imgVideo);
+
+    const imgGrid = document.createElement('img');
+    imgGrid.src = src;
+    imgGrid.alt = alt;
+    gridPreview.appendChild(imgGrid);
+  });
+
+  const videoImages = Array.from(grid.querySelectorAll('img'));
+
+  let index = 0;
+  videoImages[index].style.display = 'block'; // show first
+
+  setInterval(() => {
+    videoImages[index].style.display = 'none';
+    index = (index + 1) % videoImages.length;
+    videoImages[index].style.display = 'block';
+  }, 1000);
+});
+</script>

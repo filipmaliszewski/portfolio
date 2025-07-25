@@ -1,0 +1,278 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 9</title>
+<style>
+  :root {
+    --gap: 1rem;
+    --bg: #000;
+    --text: #fff;
+    --font: Helvetica, Arial, sans-serif;
+    --size: 1rem;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: var(--font);
+    font-size: var(--size);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.5;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--gap);
+    flex-wrap: wrap;
+  }
+
+  .back-btn {
+    background: none;
+    border: none;
+    font: inherit;
+    color: var(--text);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .back-btn:hover {
+    border-color: var(--text);
+  }
+
+  .description-columns {
+    display: flex;
+    gap: var(--gap);
+    margin-bottom: 2rem;
+  }
+
+  .description-columns .left {
+    flex: 1 1 60%;
+  }
+
+  .description-columns .right {
+    flex: 1 1 35%;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 2rem;
+  }
+
+  .description-columns .right p {
+    margin-bottom: 0.75rem;
+  }
+
+  .right .title {
+    font-family: Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-decoration: underline;
+    letter-spacing: 1px;
+  }
+
+  .place {
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    opacity: 0.8;
+  }
+
+  .grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    padding: 1.5rem 0;
+    align-items: start;
+    min-height:200px;
+  }
+
+  .image-container img {
+    width: 100%;
+    aspect-ratio: 1 / 1.414;
+    object-fit: cover;
+    display: block;
+  }
+
+  .caption-box,
+  .right-caption-block {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    opacity: 0.9;
+    max-width: 100%;
+  }
+
+  .image-container {
+    width: 100%;
+  }
+
+  .scale-wrapper {
+    transform: scale(0.95);
+    transform-origin: top center;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+  body {
+    font-size: 0.75rem;
+  }
+
+  .right .title {
+    font-size: 1rem;
+  }
+
+  .place {
+    font-size: 0.6rem;
+  }
+
+  .caption-box,
+  .right-caption-block {
+    font-size: 0.65rem;
+    line-height: 1.3;
+  }
+
+  .name {
+    font-size: 0.9rem;
+  }
+
+  .back-btn {
+    font-size: 0.75rem;
+  }
+
+  main {
+    padding: 0.5rem;
+  }
+
+  .description-columns {
+    gap: 0.75rem;
+  }
+
+  .description-columns .right {
+    margin-left: 1rem;
+  }
+
+  .grid-row {
+    gap: 3%;
+  }
+
+  .scale-wrapper {
+    transform: scale(0.92);
+  }
+    #caption2,
+#caption3 {
+  font-size: 0.5rem;
+  line-height: 1.3;
+}
+}
+</style>
+
+<main>
+  <header>
+    <span class="name">FILIP MALISZEWSKI</span>
+    <button class="back-btn" onclick="location.href='https://filipmaliszewski.github.io/portfolio/'">WORKS</button>
+  </header>
+
+  <div class="description-columns">
+    <div class="left">
+      <p>
+        A visual campaign for @angeltooth, a small, independent tooth gem artist on Instagram. I’ve collaborated with her before, creating whimsical and kitschy visuals, including the now iconic “chicken with teeth” poster that resonated with Gen Z and brought a wave of new clients to her studio.
+        <br><br>
+        For this project, we had a quick conversation where she playfully referred to herself in the third person as “grandma.” That moment sparked the concept for a summery, tongue-in-cheek poster series centered around a “cool grandma” aesthetic. I began by collecting visual references, then generated a base image in SORA. From there, I refined and composed the final poster in Photoshop.
+      </p>
+    </div>
+    <div class="right">
+      <p class="title">Granny's got teeth</p>
+      <p class="place">Amsterdam 2025<br>Visual campaign design for<br>@angeltooth tooth gem artist</p>
+    </div>
+  </div>
+
+  <div class="scale-wrapper">
+
+    <!-- Row 1: Image 1 + Image 2 -->
+    <div class="grid-row">
+      <div class="image-container">
+        <img src="https://live.staticflickr.com/65535/54676266644_a32f4a2dd0_b.jpg" alt="Image 1">
+      </div>
+      <div class="image-container">
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXowZWtkZG1uMWxweDZxeXdybDFtNnJyMm1uOG5pczU0dDRvd3Y4ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Yfew9CEY26FzIY1ti7/giphy.gif" alt="Image 2">
+      </div>
+    </div>
+
+    <!-- Row 2: Caption 1 + Caption 2 -->
+    <div class="grid-row">
+      <div class="caption-box">
+          Prompt: A photorealistic close-up portrait of a stereotypical old, a bit overweight grandma on a beach, shot with a fisheye lens. She has deeply wrinkled, leathery, slightly sunburned skin, and is leaning in toward the camera, pulling down her lower lip to proudly reveal sparkling tooth gems. Her expression is fierce and rebellious. She has messy grey hair. She has washed-out blackletter tattoos on her face and collarbones. The lighting is cool and bright like a high-fashion editorial shoot. The background is beach. The aesthetic is surreal skater-core meets Vogue fashion ad: iconic, kitsch, weirdly elegant, and subversively cool.
+      </div>
+      <div class="caption-box" id="caption2"></div>
+    </div>
+
+    <!-- Row 3: Image 3 + Image 4 -->
+    <div class="grid-row">
+      <div class="image-container">
+        <img src="https://live.staticflickr.com/65535/54676264398_93768567fe_b.jpg" alt="Image 3">
+      </div>
+      <div class="image-container">
+        <img src="https://live.staticflickr.com/65535/54676264403_d4c40f2b50_b.jpg" alt="Image 4">
+      </div>
+    </div>
+
+    <!-- Row 4: Image 5 + Caption 3 -->
+    <div class="grid-row image5-offset">
+      <div class="image-container">
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXViYmhmMHZoaDFyOXF3aDAzZ2U1YmxkYXpseHR1MWp4cjA5MzYwZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MiewfGpGk4pPq70vmW/giphy.gif" alt="Image 5">
+      </div>
+      <div class="right-caption-block" id="caption3"></div>
+    </div>
+    <!-- Row 3: Image 6 + Image 7 -->
+    <div class="grid-row">
+      <div class="image-container">
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3UxMm1tM2F5c2lkZ3QweTkzdDF1dWY4Y3QwdHR0MGhwc3hsOG9iYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u9rN80u8kFfWVvVX4W/giphy.gif" alt="Image 3">
+      </div>
+      <div class="image-container">
+        <img src="https://live.staticflickr.com/65535/54608558686_287545bc66_b.jpg" alt="Image 4">
+      </div>
+    </div>
+    
+     <div class="grid-row">
+      <div class="caption-box">
+        moodboard/inspo
+      </div>
+      <div class="caption-box"> previous chicken poster </div>
+    </div>
+    
+  </div>
+</main>
+
+<script>
+  const caption2Texts = [ "A photorealistic close-up portrait of a stereotypical old grandma on a beach, shot with a fisheye lens. She has deeply wrinkled, leathery, slightly sunburned skin, and is leaning in toward the camera, pulling down her lower lip to proudly reveal sparkling tooth gems. Her expression is fierce and rebellious. She has messy grey hair wears oversized vintage glasses and classic floral earrings. She has washed-out blackletter tattoos on her face and collarbones. The lighting is cool and bright like a high-fashion editorial shoot. The background is beach. The aesthetic is surreal skater-core meets Vogue fashion ad: iconic, kitsch, weirdly elegant, and subversively cool.",
+      "A photorealistic close-up portrait of a stereotypical elderly grandma on a beach, shot with a fisheye lens. She has deeply wrinkled, leathery, slightly sunburned skin, and is leaning in toward the camera, pulling down her lower lip to proudly reveal sparkling tooth gems. Her expression is fierce and rebellious. She wears oversized vintage glasses and classic floral earrings. She has washed-out blackletter tattoos. The lighting is cool, bright, and clinical white, like a high-fashion editorial shoot in direct midday sun. Avoid warm tones or yellowish hue. The background is clean and colorful, with soft-focus pastel beach elements—palm trees, pink umbrellas, turquoise water—but minimal visual clutter. The aesthetic is surreal skater-core meets Vogue fashion ad: iconic, kitsch, weirdly elegant, and subversively cool.",
+      "A photorealistic close-up of a sunburned, wrinkly grandma on a sunny beach. She’s leaning in close to the camera, pulling her lips to proudly show off glittering tooth gems. Her expression is fierce and full of attitude. Her skin is leathery and sun-worn, but she looks unapologetically cool. She’s covered in bold tattoos across her collarbone. The focus is on her teeth and toothgems, with the lens exaggerating her features for an edgy, skater-core aesthetic. The background is a beach scene. Lighting is harsh, white and bright. The image has the vibe of a rebellious fashion ad or music poster — loud, kitsch, and iconic.",
+      "A photorealistic image shot with a fisheye lens of a sunburned, wrinkly grandma on a sunny beach. She’s leaning in close to the camera, pulling her lips to proudly show off glittering tooth gems. Her expression is fierce and full of attitude. Her skin is leathery and sun-worn, but she looks unapologetically cool. She’s covered in bold tattoos across her collarbone. She’s wearing oversized rings, chunky jewelry, and retro sunglasses. The focus is on her teeth and toothgems, with the fisheye lens exaggerating her features for an edgy, skater-core aesthetic. The background is a chaotic beach scene with palm trees, loud colors, and boom boxes. Lighting is harsh, vibrant midday sun. The image has the vibe of a rebellious fashion ad or music poster — loud, kitsch, and iconic.",
+      "A photorealistic close-up of a sunburned, wrinkly grandma on a sunny beach. She’s leaning in close to the camera, pulling her lips to proudly show off glittering tooth gems. Her expression is fierce and full of attitude. Her skin is leathery and sun-worn, but she looks unapologetically cool. She’s covered in bold tattoos across her collarbone. The focus is on her teeth and toothgems, with the lens exaggerating her features for an edgy, skater-core aesthetic. The background is a beach scene. Lighting is harsh, vibrant midday sun. The image has the vibe of a rebellious fashion ad or music poster — loud, kitsch, and iconic."
+    ];
+  const caption3Texts = [ "Realistic close-up portrait of a sunburned grandma sunbathing on a deep blue towel. She is smiling with white teeth. The light is bright and white, she is evenly lit by it. The style is editorial, fashion magazine cover with a bit of kitsch. Her wrinkly skin has darker dots, it looks just like she left a tanning bed.",
+      "A hyperrealistic close-up of a sunburned elderly woman, lying on a deep blue towel. Her skin is sunburnt red with tan lines from sunglasses and she's wearing thick clumpy mascara. Her wrinkled skin has dark spots of age. She looks like she left a tan bed. She smiles directly at the camera with an unsettling, frozen white grin. Lighting is bright white and even. The vibe is fashion magazine cover meets kitsch, uncomfortable glamour.",
+      "A hyperrealistic close-up of a sunburned elderly man, lying on a deep blue towel. His skin is sunburnt red with tan lines from sunglasses. His wrinkled skin has dark spots of age. He looks like he left a tan bed. He smiles directly at the camera with an unsettling, frozen white grin. Lighting is bright white and even. The vibe is fashion magazine cover meets kitsch, uncomfortable glamour.",
+      "A photorealistic close-up portrait of a sunburned grandma smiling wide, showing her white even teeth. She is lying on a deep blue towel, contrasting with the reddish, wrinkly skin. She's lit evenly by a bright white light of the sun. The vibe is fashion and editorial, like a Gucci campaign, matching fashion with camp."
+    ];
+
+  let i = 0, j = 0;
+  setInterval(() => {
+    document.getElementById("caption2").textContent = caption2Texts[i];
+    document.getElementById("caption3").textContent = caption3Texts[j];
+    i = (i + 1) % caption2Texts.length;
+    j = (j + 1) % caption3Texts.length;
+  }, 100);
+</script>

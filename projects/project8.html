@@ -1,0 +1,382 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 8</title>
+  <style>
+:root {
+  --gap: 0.75rem;
+  --side: 1rem;
+  --bg: linear-gradient(135deg, #ff69b4, #ffd700, #00ffff, #9370DB, #ff1493);
+  --text: #fff;
+  --font: 'Comic Sans MS', 'Papyrus', cursive, sans-serif;
+  --size: 1.1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--size);
+  color: var(--text);
+  background: var(--bg);
+  background-size: 400% 400%;
+  animation: bgRainbow 10s ease infinite;
+  line-height: 1.6;
+}
+
+@keyframes bgRainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+main {
+  width: 100%;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--gap);
+  flex-wrap: wrap;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: var(--gap);
+  flex-wrap: wrap;
+}
+
+.name {
+  font-family: 'Impact', fantasy;
+  font-size: 1.5rem;
+  color: #fff;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px #000;
+  animation: wiggle 2s infinite ease-in-out;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(1deg); }
+  75% { transform: rotate(-1deg); }
+}
+
+.back-btn {
+  background: #ff69b4;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  border: 2px dashed #fff;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 3px #000;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background: #00ffff;
+  color: #000;
+  transform: rotate(-2deg) scale(1.05);
+  box-shadow: 0 0 10px #fff;
+}
+
+h1, .title, .place {
+  font-family: 'Courier New', monospace;
+  font-size: 2rem;
+  background: linear-gradient(to right, #ff0, #0ff, #f0f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: sparkleText 3s linear infinite;
+}
+
+@keyframes sparkleText {
+  0% { filter: drop-shadow(0 0 2px #fff); }
+  50% { filter: drop-shadow(0 0 10px #fff); }
+  100% { filter: drop-shadow(0 0 2px #fff); }
+}
+
+.meta {
+  font-style: italic;
+  margin-bottom: calc(var(--gap) * 1.5);
+}
+
+.section {
+  margin-bottom: calc(var(--gap) * 2);
+}
+
+.section p {
+  margin-bottom: var(--gap);
+}
+
+.section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.description-columns {
+  display: flex;
+  gap: var(--gap);
+  margin-bottom: calc(var(--gap) * 2);
+  flex-wrap: wrap;
+}
+
+.description-columns .left,
+.description-columns .right {
+  flex: 1 1 100%;
+}
+
+.description-columns .right {
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  margin-top: var(--gap);
+}
+
+.description-columns .right p {
+  margin-bottom: 0.75rem;
+}
+
+.description-columns .right .title {
+  font-family: Arial, sans-serif;
+  font-size: 1.6rem;
+  text-decoration: underline;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+.description-columns .right .place {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.description-columns .right .collab,
+.description-columns .right .thanks {
+  font-family: Arial, sans-serif;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.description-columns .right .underscore {
+  text-decoration: underline dotted;
+}
+
+.image-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border: 5px double #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #fff, 0 0 20px #ff69b4, 0 0 30px #00ffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-section img:hover {
+  transform: rotate(1deg) scale(1.03);
+  box-shadow: 0 0 20px #ff69b4, 0 0 40px #00ffff, 0 0 60px #ffff00;
+}
+@media (min-width: 1024px) {
+  .image-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .image-section {
+    grid-template-columns: 1fr;
+  }
+}
+.kitsch-link {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff0;
+  background: #f0f;
+  padding: 1rem;
+  border: 5px double #0ff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 2rem auto;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #f0f, 0 0 30px #0ff;
+  animation: pulse 1.5s infinite ease-in-out;
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.kitsch-link:hover {
+  transform: scale(1.1) rotate(-1deg);
+  background: #ff69b4;
+  color: #00f;
+  box-shadow: 0 0 25px #ff69b4, 0 0 50px #00f;
+  text-decoration: underline wavy yellow;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 10px #f0f, 0 0 20px #0ff;
+  }
+  50% {
+    box-shadow: 0 0 25px #ff0, 0 0 45px #0ff;
+  }
+}
+
+#bouncing-cat {
+  position: fixed;
+  width: 120px;
+  z-index: 999999;
+  pointer-events: none;
+  animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+    @media (max-width: 480px) {
+  .kitsch-link {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    border-width: 3px;
+  }
+}
+  </style>
+</head>
+<body>
+<div style="position: fixed; inset: 0; background: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZW13OHVobDdoNXNmMmp2c2llbDJmaTZpemx2anJobTc5aDMzdmM0eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7aDcrsww5Ybp18hq/giphy.gif') repeat; z-index: -1; opacity: 0.5;"></div>
+<main>
+<header>
+  <div class="header-top">
+    <span class="name">FILIP MALISZEWSKI</span>
+    <button class="back-btn" onclick="location.href='https://filipmaliszewski.github.io/portfolio/'">WORKS</button>
+  </div>
+</header>
+
+<div class="section description-columns">
+  <div class="left">
+    <p>
+      <a class="kitsch-link" href="https://filipmaliszewski.github.io/maze/" target="_blank">
+        ⇢ Visit the MAZE PORTFOLIO ⇠
+      </a>
+    </p>
+    <p>Unfinished 3D maze portfolio website, fully designed by me. The only reason why you're here not there is the lagging and CPU drain. But go on, explore the fantasy-meets-brutalism labyrinth I spent months on :P</p>
+  </div>
+  <div class="right">
+    <p class="title">THREE.JS_website-MAze</p>
+    <p class="place">Amsterdam, __2025__</p>
+    <p class="collab">coding<br><span class="underscore">experimental</span></p>
+    <p class="thanks">game design <br> interactive design</p>
+  </div>
+</div>
+
+<!-- First Image Section -->
+<div class="image-section">
+  <img src="https://media2.giphy.com/media/aaRgLt3JspjXMqYP3t/giphy.gif" alt="Process 1">
+  <img src="https://media2.giphy.com/media/gTVHwZggao186JgN7n/giphy.gif" alt="Process 2">
+  <img src="https://media1.giphy.com/media/i3jH6gKzx1BFqFAtYy/giphy.gif" alt="Process 3">
+  <img src="https://media2.giphy.com/media/ZbC085J7vVwBTtr0hi/giphy.gif" alt="Process 4">
+  <img src="https://media1.giphy.com/media/DxVKAnx0ALVvXp13hp/giphy.gif" alt="Process 5">
+</div>
+
+<!-- Second Image Section -->
+<div class="image-section">
+  <img src="https://live.staticflickr.com/65535/54608714373_f524116705_b.jpg" alt="Photo 1">
+  <img src="https://live.staticflickr.com/65535/54608502726_59012bf52e_b.jpg" alt="Photo 2">
+  <img src="https://live.staticflickr.com/65535/54608714353_e5807128c8_b.jpg" alt="Photo 3">
+</div>
+
+<!-- Third Image Section -->
+<div class="image-section">
+  <img src="https://media2.giphy.com/media/VCqwvM4VRWjoidYqTI/giphy.gif" alt="Process A">
+  <img src="https://media3.giphy.com/media/xPuviHfSMgx0TJUFGM/giphy.gif" alt="Process B">
+  <img src="https://media1.giphy.com/media/EPwdzcGnhG27ChP4vi/giphy.gif" alt="Process C">
+  <img src="https://media3.giphy.com/media/A7wzjnukARqbbISP3e/giphy.gif" alt="Process D">
+  <img src="https://media1.giphy.com/media/DUjnTLpVbC0ZsZEHeZ/giphy.gif" alt="Process E">
+  <img src="https://media2.giphy.com/media/FrVGxT2n7lbtvJQheS/giphy.gif" alt="Process F">
+</div>
+
+<img src="https://media0.giphy.com/media/lJNoBCvQYp7nq/giphy.gif" id="bouncing-cat" />
+</main>
+
+<script>
+// Color trail effect
+const colors = ["#ff69b4", "#ff0", "#0ff", "#f0f", "#00f", "#0f0"];
+let index = 0;
+
+document.addEventListener("mousemove", function(e) {
+  const trail = document.createElement("div");
+  trail.style.position = "fixed";
+  trail.style.left = e.pageX + "px";
+  trail.style.top = e.pageY + "px";
+  trail.style.width = "12px";
+  trail.style.height = "12px";
+  trail.style.borderRadius = "50%";
+  trail.style.background = colors[index];
+  trail.style.pointerEvents = "none";
+  trail.style.zIndex = "9999";
+  trail.style.boxShadow = `0 0 10px ${colors[index]}`;
+  trail.style.transition = "opacity 0.4s ease-out";
+  document.body.appendChild(trail);
+
+  setTimeout(() => {
+    trail.style.opacity = "0";
+    setTimeout(() => trail.remove(), 400);
+  }, 10);
+
+  index = (index + 1) % colors.length;
+});
+
+// Bouncing cat
+const cat = document.getElementById('bouncing-cat');
+let x = 100, y = 100;
+let dx = 2, dy = 2;
+const size = 120;
+
+function bounceCat() {
+  const screenW = window.innerWidth;
+  const screenH = window.innerHeight;
+
+  x += dx;
+  y += dy;
+
+  if (x + size >= screenW || x <= 0) dx = -dx;
+  if (y + size >= screenH || y <= 0) dy = -dy;
+
+  cat.style.left = x + 'px';
+  cat.style.top = y + 'px';
+
+  requestAnimationFrame(bounceCat);
+}
+bounceCat();
+</script>
+</body>
